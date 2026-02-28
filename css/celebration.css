@@ -1,0 +1,60 @@
+.celebration {
+  height: 100vh;
+  width: 100%;
+  background: #8cc461;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.celebration-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.trophy {
+  position: relative;
+  z-index: 2;
+}
+
+.star {
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  z-index: 1;
+  opacity: 1;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -75%);
+
+  filter: drop-shadow(0 0 70px gold);
+}
+
+@keyframes floatUpDown {
+  0% {
+    transform: translate(-50%, -60%);
+  }
+  50% {
+    transform: translate(-50%, -70%);
+  }
+  100% {
+    transform: translate(-50%, -60%);
+  }
+}
+
+@keyframes pop {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}

@@ -1,80 +1,84 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
     <title>Rock Paper Scissors</title>
-    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/game.css" />
+    <link rel="stylesheet" href="./css/rules.css" />
   </head>
+
   <body>
-    <!-- HEADER -->
-    <div class="header">
-      <div class="title">
-        <h1>ROCK<br />PAPER<br />SCISSORS</h1>
-      </div>
+    <div class="scoreboard">
+      <div class="title">ROCK<br />PAPER<br />SCISSORS</div>
 
-      <div class="score-board">
-        <div class="score-box">
-          <p>COMPUTER<br />SCORE</p>
-          <h2 id="computerScore">0</h2>
-        </div>
-        <div class="score-box">
-          <p>YOUR<br />SCORE</p>
-          <h2 id="userScore">0</h2>
-        </div>
+      <div class="score-box">
+        <p>COMPUTER SCORE</p>
+        <h1 id="computer-score">0</h1>
+      </div>
+      <button id="next-btn">NEXT</button>
+      <div class="score-box">
+        <p>YOUR SCORE</p>
+        <h1 id="user-score">0</h1>
       </div>
     </div>
 
-    <!-- GAME AREA -->
     <div class="game-area" id="gameArea">
-      <div class="top-choice">
-        <div class="choice paper" data-choice="paper">
-          <img src="assets/paper.png" />
-        </div>
-      </div>
+      <svg class="triangle-lines" viewBox="0 0 300 260">
+        <line x1="150" y1="40" x2="40" y2="220" />
+        <line x1="150" y1="40" x2="260" y2="220" />
+        <line x1="40" y1="220" x2="260" y2="220" />
+      </svg>
 
-      <div class="bottom-choices">
-        <div class="choice stone" data-choice="stone">
-          <img src="assets/stone.png" />
-        </div>
+      <button class="choice rock" data-choice="rock">
+        <img src="./assets/rock.png" />
+      </button>
 
-        <div class="choice scissor" data-choice="scissor">
-          <img src="assets/scissor.png" />
-        </div>
-      </div>
+      <button class="choice paper" data-choice="paper">
+        <img src="./assets/paper.png" />
+      </button>
+
+      <button class="choice scissors" data-choice="scissors">
+        <img src="./assets/scissors.png" />
+      </button>
     </div>
 
-    <!-- RESULT SCREEN -->
-    <div class="result-screen hidden" id="resultScreen">
-      <div class="picked">
+    <div class="vs-screen hidden" id="vsScreen">
+      <div>
         <p>YOU PICKED</p>
-        <div id="userPicked" class="choice result-choice"></div>
+        <div id="userPick"></div>
       </div>
 
-      <div class="result-center">
+      <div>
         <h2 id="resultText"></h2>
-        <button id="playAgainBtn">PLAY AGAIN</button>
-        <button id="nextBtn" class="hidden">NEXT</button>
+        <button id="playAgain">PLAY AGAIN</button>
       </div>
 
-      <div class="picked">
+      <div>
         <p>PC PICKED</p>
-        <div id="pcPicked" class="choice result-choice"></div>
+        <div id="pcPick"></div>
+      </div>
+    </div>
+    <div class="celebration hidden" id="hurrayScreen">
+      <div class="celebration-container">
+        <img src="./assets/star.png" class="star" />
+        <img src="./assets/trophy.png" class="trophy" />
+
+        <h1>HURRAY!!</h1>
+        <p>YOU WON THE GAME</p>
+
+        <button id="playAgainHurray">PLAY AGAIN</button>
       </div>
     </div>
 
-    <button class="rules-btn" id="rulesBtn">RULES</button>
+    <button id="rules-btn">RULES</button>
 
-    <div class="rules-popup" id="rulesPopup">
-      <div class="rules-content">
-        <h3>Game Rules</h3>
-        <ul>
-          <li>Rock beats Scissors</li>
-          <li>Scissors beats Paper</li>
-          <li>Paper beats Rock</li>
-        </ul>
-        <button id="closeRules">CLOSE</button>
-      </div>
+    <div id="rules-popup" class="hidden">
+      <button id="close-rules">X</button>
+      <p>Rock beats Scissors<br />Scissors beats Paper<br />Paper beats Rock</p>
     </div>
 
-    <script src="js/game.js"></script>
+    <script type="module" src="./js/main.js"></script>
   </body>
 </html>
