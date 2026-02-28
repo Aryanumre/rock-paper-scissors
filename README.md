@@ -22,7 +22,7 @@ A fully functional Rock Paper Scissors game built using HTML, CSS, and JavaScrip
 ## 🚀 Live Demo
 
 🔗 Deployed Project Link:  
-https://regal-beignet-6323af.netlify.app
+https://rps-js-module-project.netlify.app/
 
 ---
 
