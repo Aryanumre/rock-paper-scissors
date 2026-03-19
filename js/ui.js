@@ -28,27 +28,26 @@ export function showVsScreen(user, pc) {
 }
 
 export function showResult(winner) {
-  // 🔥 RESET sabse pehle
   playAgainBtn.innerText = "PLAY AGAIN";
   nextBtn.classList.add("hidden");
 
   if (winner === "tie") {
     resultText.innerHTML = "TIE UP";
 
-    playAgainBtn.innerText = "REPLAY"; // 👈 sirf tie me change
-    nextBtn.classList.add("hidden"); // 👈 NEXT hide fix
+    playAgainBtn.innerText = "REPLAY";
+    nextBtn.classList.add("hidden");
   } else if (winner === "user") {
     resultText.innerHTML = "YOU WIN<br>AGAINST PC";
 
     highlightWinner("user");
 
-    nextBtn.classList.remove("hidden"); // 👈 sirf win me NEXT
+    nextBtn.classList.remove("hidden");
   } else {
     resultText.innerHTML = "YOU LOST<br>AGAINST PC";
 
     highlightWinner("computer");
 
-    nextBtn.classList.add("hidden"); // 👈 lose me bhi hide
+    nextBtn.classList.add("hidden");
   }
 }
 
@@ -82,6 +81,5 @@ export function resetGameScreen() {
 
   nextBtn.classList.add("hidden");
 
-  // 🔥 IMPORTANT RESET
   playAgainBtn.innerText = "PLAY AGAIN";
 }
