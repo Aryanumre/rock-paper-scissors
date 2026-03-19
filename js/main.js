@@ -2,6 +2,9 @@ import { playGame } from "./gameLogic.js";
 import { resetGameScreen, updateScoreUI } from "./ui.js";
 import { getScores } from "./storage.js";
 
+if (performance.getEntriesByType("navigation")[0].type === "reload") {
+  localStorage.clear();
+}
 const nextBtn = document.getElementById("next-btn");
 const playAgainHurray = document.getElementById("playAgainHurray");
 const choices = document.querySelectorAll(".choice");
@@ -36,7 +39,7 @@ if (playAgainBtn) {
 }
 if (nextBtn) {
   nextBtn.addEventListener("click", () => {
-    resetGameScreen();
+    window.location.href = "hurray.html";
   });
 }
 

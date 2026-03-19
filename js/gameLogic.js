@@ -26,17 +26,4 @@ export function playGame(userChoice) {
   const scores = updateScore(winner);
   updateScoreUI(scores);
   showResult(winner);
-
-  /* 🔥 GAME WIN CHECK */
-  if (scores.user >= WINNING_SCORE) {
-    setTimeout(() => {
-      window.location.href = "hurray.html";
-    }, 1000);
-  } else if (scores.computer >= WINNING_SCORE) {
-    setTimeout(() => {
-      alert("Computer Won The Game!");
-      localStorage.clear();
-      window.location.reload();
-    }, 1000);
-  }
 }

@@ -9,16 +9,60 @@
   border-radius: 8px;
 }
 
+#close-rules {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+
+  width: 35px;
+  height: 35px;
+
+  background: red;
+  color: white;
+
+  border-radius: 50%;
+  border: 3px solid white;
+
+  cursor: pointer;
+}
+.close-btn {
+  z-index: 1000;
+}
+#rules-popup h2 {
+  margin-bottom: 15px;
+  font-size: 22px;
+}
 #rules-popup {
   position: fixed;
-  bottom: 80px;
-  right: 20px;
+  bottom: 120px;
+  right: 40px;
+
+  width: 300px;
+
   background: #004429;
   color: white;
-  padding: 20px;
-  border-radius: 8px;
+
+  border: 6px solid white;
+  border-radius: 12px;
+
+  padding: 1px;
+
+  line-height: 1.4;
 }
 
 .hidden {
   display: none;
+}
+#rules-popup ul {
+  padding-left: 18px;
+}
+
+#rules-popup li {
+  margin-bottom: 6px;
+  list-style-type: square;
+  color: white;
+}
+
+#rules-popup li::marker {
+  color: #ffd600;
 }
